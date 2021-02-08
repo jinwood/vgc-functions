@@ -1,8 +1,8 @@
 {
   "name": "functions",
   "scripts": {
-    "lint": "eslint --ext .js,.ts .",
-    "build": "tsc",
+    "lint": "eslint --ext .ts",
+    "build": "./node_modules/.bin/tsc",
     "serve": "npm run build && firebase emulators:start --only functions",
     "shell": "npm run build && firebase functions:shell",
     "start": "npm run shell",
@@ -22,7 +22,9 @@
     "@typescript-eslint/parser": "^3.8.0",
     "eslint": "^7.6.0",
     "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.3.1",
     "firebase-functions-test": "^0.2.0",
     "typescript": "^3.8.0"
   },

@@ -4,6 +4,7 @@ module.exports = {
     node: true,
   },
   extends: [
+    "prettier",
     "eslint:recommended",
     "plugin:import/errors",
     "plugin:import/warnings",
@@ -16,13 +17,15 @@ module.exports = {
     sourceType: "module",
   },
   ignorePatterns: [
-    "/lib/**/*", // Ignore built files.
+    "/dist/**/*", // Ignore built files.
   ],
   plugins: [
+    "prettier",
     "@typescript-eslint",
     "import",
   ],
   rules: {
     quotes: ["error", "double"],
+    "prettier/prettier": ["error"]
   },
 };
